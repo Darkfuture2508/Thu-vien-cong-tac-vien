@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm cộng tác viên thư viện</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+        }
+        h1 {
+            color: #007bff;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+        .menu a {
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .menu a:hover {
+            background-color: #ff3333;
+        }
+        #management {
+            background-color: #ff3333;
+        }
+    </style>
+    <script>
+        function accessManagement() {
+            const password = prompt("Vui lòng nhập mật khẩu để truy cập Ban quản lý:");
+            if (password === "matkhau123") { // Thay "matkhau123" bằng mật khẩu bạn mong muốn
+                window.location.href = "management.html";
+            } else {
+                alert("Mật khẩu không đúng!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Nhóm cộng tác viên thư viện</h1>
+    </header>
+    <nav class="menu">
+        <a href="design.html">Thiết kế - Design</a>
+        <a href="content.html">Nội dung - Content</a>
+        <a href="decor.html">Trang trí - Decor</a>
+        <a href="translation.html">Dịch thuật - Translation</a>
+        <a href="library_support.html">Hỗ trợ thư viện - Library Support</a>
+        <a id="management" href="#" onclick="accessManagement()">Ban quản lý - Management</a>
+    </nav>
+</body>
+</html>
